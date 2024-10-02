@@ -23,7 +23,7 @@ WebDriver driver;
 	}
 	
 	@FindBy(xpath="//*[contains(text(),\"Subscription\")]") WebElement subscriptiontext;
-	@FindBy(xpath="//input[@id='subscribe_email']") WebElement emailTextbox;
+	@FindBy(xpath="//input[@id='susbscribe_email']") WebElement emailTextbox;
 	@FindBy(id="subscribe") WebElement subscribeBtn;
 	@FindBy(xpath="//ul[@class='nav navbar-nav']/descendant::a[@href='/view_cart']")  WebElement viewcart;
 	@FindBy(xpath="//div[@class=\"modal-content\"]/descendant::button") WebElement contBtn;
@@ -43,7 +43,7 @@ WebDriver driver;
 		
 		}
 		catch(Exception e) {
-			e.getStackTrace();
+			e.printStackTrace();
 		}
 	}
 	

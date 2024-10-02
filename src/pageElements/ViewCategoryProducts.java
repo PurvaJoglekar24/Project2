@@ -11,6 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class ViewCategoryProducts {
 
@@ -61,6 +62,7 @@ WebDriver driver;
 	
 	catch(Exception e){
 		e.getStackTrace();
+		Assert.fail();
 	}
 	}
 	

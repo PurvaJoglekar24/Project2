@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pageElements.AddProducts;
@@ -33,18 +34,9 @@ public class BaseTest {
 
 	WebDriver driver;
 
-	@Test
+	@BeforeTest
 	public void adBlocker() {
-	ChromeOptions options=new ChromeOptions();
-	options.addExtensions(new File("C:\\Users\\purva\\OneDrive\\Documents\\Project 2- Automation\\AdBlock.crx"));
-	DesiredCapabilities capabilities = new DesiredCapabilities();
-	capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-	options.merge(capabilities);
-	options.addArguments("--disable-notifications");
-	options.setExperimentalOption("prefs",new HashMap<String,Object>()
-	{{put ("autofill.profile_enabled",false);}});
-	options.addArguments("--save-password-bubble");
-	driver= new ChromeDriver(options);
+	
 	}
 	@Test(priority=1)
 	public void launchApplication() {

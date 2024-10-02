@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SignUpPage {
@@ -52,6 +53,8 @@ WebDriver driver;
 	
 	@Test
 	public void deletingAlreadyregisteredaccount() {
+		
+				
 		signUpBtn.click();
 		Login lp=new Login(driver);
 		lp.validCredentials("purvakulkarni99@gmail.com","123456");
