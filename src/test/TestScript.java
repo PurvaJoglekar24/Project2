@@ -265,7 +265,7 @@ public void addProductInCart() throws InterruptedException {
 		accountDeletedPage.clickContinue();
 		
 	}
-	
+	@Test(priority=15)
 	public void   PlaceOrderRegisterBeforeCheckout() throws InterruptedException {
 		Assert.assertEquals(BasePage.currentUrl(), "https://automationexercise.com/");
 		homePage.clickOnHeaderElement("Signup / Login");
